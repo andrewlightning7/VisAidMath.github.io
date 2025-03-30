@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="XBench: 多模态评估基准">
-  <meta name="keywords" content="XBench, 多模态, 评估基准">
+        content="VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning">
+  <meta name="keywords" content="VisAidMath, Visual-Aided, Mathematical Reasoning, Benchmark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>XBench: 多模态评估基准</title>
+  <title>VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning</title>
 
-  <link rel="icon" href="./static/images/xbench-logo.png">
+  <link rel="icon" href="./static/images/visaidmath-logo.png">
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -42,7 +42,7 @@
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          相关研究
+          Related Research
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item" href="https://mathvista.github.io/">
@@ -69,29 +69,34 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title is-bold">
-            <img src="static/images/xbench-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-            <span class="xbench" style="vertical-align: middle">XBench</span>
+            <img src="static/images/visaidmath-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="visaidmath" style="vertical-align: middle">VisAidMath</span>
           </h1>
           <h2 class="subtitle is-3 publication-subtitle">
-            多模态评估基准
+            Benchmarking Visual-Aided Mathematical Reasoning
           </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="#">作者一</a><sup style="color:#6fbf73;">1</sup>,</span>
+              <a href="#">Jingkun Ma</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="#">作者二</a><sup style="color:#6fbf73;">1</sup>,</span>
+              <a href="#">Runzhe Zhan</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="#">作者三</a><sup style="color:#ed4b82">2</sup>,
-            </span>
+              <a href="#">Derek F. Wong</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="#">作者四</a><sup style="color:#ffac33">3</sup>
+              <a href="#">Yang Li</a><sup style="color:#6fbf73;">1</sup>,</span>
+            <span class="author-block">
+              <a href="#">Di Sun</a><sup style="color:#ed4b82">2</sup>,</span>
+            <span class="author-block">
+              <a href="#">Hou Pong Chan</a><sup style="color:#ffac33">3</sup>,</span>
+            <span class="author-block">
+              <a href="#">Lidia S. Chao</a><sup style="color:#6fbf73;">1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup style="color:#6fbf73;">1</sup>机构一,</span><br>
-            <span class="author-block"><sup style="color:#ed4b82">2</sup>机构二,</span>
-            <span class="author-block"><sup style="color:#ffac33">3</sup>机构三</span><br>
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>NLP<sup>2</sup>CT Lab, Department of Computer and Information Science, University of Macau,</span><br>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>University of Macau,</span>
+            <span class="author-block"><sup style="color:#ffac33">3</sup>DAMO Academy, Alibaba Group</span><br>
           </div>
         
           <div class="column has-text-centered">
@@ -102,7 +107,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>论文</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <span class="link-block">
@@ -111,7 +116,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>代码</span>
+                  <span>Code</span>
                 </a>
               </span>
               <span class="link-block">
@@ -120,7 +125,7 @@
                   <span class="icon">
                       <p style="font-size:18px">🏆</p>
                   </span>
-                  <span>排行榜</span>
+                  <span>Leaderboard</span>
                 </a>
               </span>
               <span class="link-block">
@@ -129,7 +134,7 @@
                   <span class="icon">
                       <p style="font-size:18px">🌐</p>
                   </span>
-                  <span>演示</span>
+                  <span>Demo</span>
                 </a>
               </span>
             </div>
@@ -140,17 +145,17 @@
   </div>
 </section>
 
-<!-- 1. 摘要部分 -->
+<!-- 1. Abstract Section -->
 <section class="section">
   <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <div class="box m-5">
           <div class="content has-text-centered">
-            <h2 class="title is-3">XBench: 多模态评估基准</h2>
+            <h2 class="title is-3">VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning</h2>
             <p class="is-size-4">
-              • 数据量：1.2M样本 | 3层级难度 | 5类评估指标<br>
-              • 核心价值：首个支持跨领域推理的多模态基准测试
+              • Dataset: 1.2M samples | 3 difficulty levels | 5 evaluation metrics<br>
+              • Core Value: First benchmark supporting cross-domain visual-aided mathematical reasoning
             </p>
           </div>
         </div>
@@ -159,52 +164,52 @@
   </div>
 </section>
 
-<!-- 2. 概述部分 -->
+<!-- 2. Overview Section -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">概述</h2>
+        <h2 class="title is-3">Overview</h2>
         
-        <!-- 2.1 关键特性和数据分布 -->
+        <!-- 2.1 Key Features and Data Distribution -->
         <div class="columns">
-          <!-- 左侧：关键特性 -->
+          <!-- Left: Key Features -->
           <div class="column">
             <div class="box">
-              <h3 class="title is-4">关键特性</h3>
+              <h3 class="title is-4">Key Features</h3>
               <div class="content has-text-left">
                 <ul>
-                  <li>3类数据来源：学术论文、网络爬取、人工标注</li>
-                  <li>5级质量审核：初筛、清洗、标注、验证、评估</li>
-                  <li>多维度评估：准确率、F1值、延迟时间、资源消耗</li>
-                  <li>跨领域适用：科学、文学、多媒体内容</li>
+                  <li>3 data sources: academic papers, web crawling, human annotation</li>
+                  <li>5-level quality review: screening, cleaning, annotation, validation, evaluation</li>
+                  <li>Multi-dimensional evaluation: accuracy, F1 score, latency, resource consumption</li>
+                  <li>Cross-domain applicability: science, literature, multimedia content</li>
                 </ul>
               </div>
             </div>
           </div>
           
-          <!-- 右侧：数据分布 -->
+          <!-- Right: Data Distribution -->
           <div class="column">
             <div class="box">
-              <h3 class="title is-4">数据分布</h3>
+              <h3 class="title is-4">Data Distribution</h3>
               <div class="content has-text-centered">
-                <img src="static/images/data-distribution.png" alt="数据分布" width="80%"/>
-                <p>数据来源百分比分布</p>
-                <img src="static/images/difficulty-levels.png" alt="难度等级" width="80%"/>
-                <p>难度等级分布</p>
+                <img src="static/images/data-distribution.png" alt="Data Distribution" width="80%"/>
+                <p>Data Source Percentage Distribution</p>
+                <img src="static/images/difficulty-levels.png" alt="Difficulty Levels" width="80%"/>
+                <p>Difficulty Level Distribution</p>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- 2.2 模型雷达图 -->
+        <!-- 2.2 Model Radar Chart -->
         <div class="columns is-centered">
           <div class="column is-full">
             <div class="box">
-              <h3 class="title is-4">模型性能对比</h3>
+              <h3 class="title is-4">Model Performance Comparison</h3>
               <div class="content has-text-centered">
-                <img src="static/images/radar-chart.png" alt="模型雷达图" width="70%"/>
-                <p>五维性能对比：基线模型 / 模型A / 模型B / 我们的方法</p>
+                <img src="static/images/radar-chart.png" alt="Model Radar Chart" width="70%"/>
+                <p>Five-dimensional Performance Comparison: Baseline / Model A / Model B / Our Method</p>
               </div>
             </div>
           </div>
@@ -214,12 +219,12 @@
   </div>
 </section>
 
-<!-- 3. 数据集特性 -->
+<!-- 3. Dataset Features -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <h1 class="title is-1 xbench">
-      <img src="static/images/xbench-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
-      <span class="xbench" style="vertical-align: middle">XBench 数据集</span>
+    <h1 class="title is-1 visaidmath">
+      <img src="static/images/visaidmath-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+      <span class="visaidmath" style="vertical-align: middle">VisAidMath Dataset</span>
     </h1>
   </div>
 </section>
@@ -228,67 +233,67 @@
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <!-- 3.1 数据源表格 -->
-        <h2 class="title is-3">数据来源</h2>
+        <!-- 3.1 Data Source Table -->
+        <h2 class="title is-3">Data Sources</h2>
         <div class="content">
           <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
               <tr>
-                <th>数据来源</th>
-                <th>详情</th>
-                <th>难度等级</th>
+                <th>Data Source</th>
+                <th>Details</th>
+                <th>Difficulty Level</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>学术论文</td>
-                <td>经术语标准化处理</td>
+                <td>Academic Papers</td>
+                <td>Processed with terminology standardization</td>
                 <td>L3</td>
               </tr>
               <tr>
-                <td>网络爬取</td>
-                <td>隐私信息脱敏</td>
+                <td>Web Crawling</td>
+                <td>Privacy information anonymized</td>
                 <td>L2</td>
               </tr>
               <tr>
-                <td>人工标注</td>
-                <td>多轮质量审核</td>
+                <td>Human Annotation</td>
+                <td>Multi-round quality review</td>
                 <td>L1-L3</td>
               </tr>
             </tbody>
           </table>
         </div>
         
-        <!-- 3.2 标注流程 -->
-        <h2 class="title is-3">标注流程</h2>
+        <!-- 3.2 Annotation Process -->
+        <h2 class="title is-3">Annotation Process</h2>
         <div class="content has-text-centered">
-          <img src="static/images/annotation-flow.png" alt="标注流程" width="80%"/>
-          <p>数据处理流程：1. 数据源收集 → 2. 数据清洗 → 3. 标注 → 4. 验证<br>
-          • 关键节点：红色标注质量检查点</p>
+          <img src="static/images/annotation-flow.png" alt="Annotation Process" width="80%"/>
+          <p>Data Processing Flow: 1. Data Collection → 2. Data Cleaning → 3. Annotation → 4. Validation<br>
+          • Key Nodes: Red annotation quality checkpoints</p>
         </div>
         
-        <!-- 3.3 任务示例 -->
-        <h2 class="title is-3">任务示例</h2>
+        <!-- 3.3 Task Examples -->
+        <h2 class="title is-3">Task Examples</h2>
         <div id="results-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">科学类</h4>
-              <img src="static/images/science-example.png" alt="科学类示例" width="70%"/>
-              <p>科学类任务示例及模型输出</p>
+              <h4 class="title is-4">Scientific</h4>
+              <img src="static/images/science-example.png" alt="Scientific Example" width="70%"/>
+              <p>Scientific task example and model output</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">文学类</h4>
-              <img src="static/images/literature-example.png" alt="文学类示例" width="70%"/>
-              <p>文学类任务示例及模型输出</p>
+              <h4 class="title is-4">Literature</h4>
+              <img src="static/images/literature-example.png" alt="Literature Example" width="70%"/>
+              <p>Literature task example and model output</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">多模态</h4>
-              <img src="static/images/multimodal-example.png" alt="多模态示例" width="70%"/>
-              <p>多模态任务示例及模型输出</p>
+              <h4 class="title is-4">Multimodal</h4>
+              <img src="static/images/multimodal-example.png" alt="Multimodal Example" width="70%"/>
+              <p>Multimodal task example and model output</p>
             </div>
           </div>
         </div>
@@ -297,59 +302,59 @@
   </div>
 </section>
 
-<!-- 4. 实验结果 -->
+<!-- 4. Experimental Results -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <h1 class="title is-1 xbench">实验结果</h1>
+    <h1 class="title is-1 visaidmath">Experimental Results</h1>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <!-- 4.1 任务Tab页 -->
+    <!-- 4.1 Task Tabs -->
     <div class="columns is-centered">
       <div class="column is-four-fifths">
         <div class="tabs is-centered is-boxed">
           <ul>
-            <li class="is-active"><a data-tab="task1">任务1</a></li>
-            <li><a data-tab="task2">任务2</a></li>
-            <li><a data-tab="task3">任务3</a></li>
+            <li class="is-active"><a data-tab="task1">Task 1</a></li>
+            <li><a data-tab="task2">Task 2</a></li>
+            <li><a data-tab="task3">Task 3</a></li>
           </ul>
         </div>
         
         <div id="task1" class="tab-content">
           <div class="box">
-            <h3 class="title is-4 has-text-centered">任务1: 科学推理</h3>
+            <h3 class="title is-4 has-text-centered">Task 1: Scientific Reasoning</h3>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
-                  <th>模型</th>
-                  <th>准确率↑</th>
-                  <th>F1值↑</th>
-                  <th>延迟↓</th>
+                  <th>Model</th>
+                  <th>Accuracy↑</th>
+                  <th>F1 Score↑</th>
+                  <th>Latency↓</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>基线模型</td>
+                  <td>Baseline Model</td>
                   <td>72.3%</td>
                   <td>68.5%</td>
                   <td>120ms</td>
                 </tr>
                 <tr>
-                  <td>模型A</td>
+                  <td>Model A</td>
                   <td>78.1%</td>
                   <td>75.2%</td>
                   <td>110ms</td>
                 </tr>
                 <tr>
-                  <td>模型B</td>
+                  <td>Model B</td>
                   <td>81.5%</td>
                   <td>79.8%</td>
                   <td>105ms</td>
                 </tr>
                 <tr>
-                  <td>我们的方法</td>
+                  <td>Our Method</td>
                   <td>85.1%</td>
                   <td>82.3%</td>
                   <td>95ms</td>
@@ -361,37 +366,37 @@
         
         <div id="task2" class="tab-content" style="display:none">
           <div class="box">
-            <h3 class="title is-4 has-text-centered">任务2: 文学理解</h3>
+            <h3 class="title is-4 has-text-centered">Task 2: Literature Understanding</h3>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
-                  <th>模型</th>
-                  <th>准确率↑</th>
-                  <th>F1值↑</th>
-                  <th>延迟↓</th>
+                  <th>Model</th>
+                  <th>Accuracy↑</th>
+                  <th>F1 Score↑</th>
+                  <th>Latency↓</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>基线模型</td>
+                  <td>Baseline Model</td>
                   <td>68.7%</td>
                   <td>65.2%</td>
                   <td>130ms</td>
                 </tr>
                 <tr>
-                  <td>模型A</td>
+                  <td>Model A</td>
                   <td>74.5%</td>
                   <td>71.8%</td>
                   <td>115ms</td>
                 </tr>
                 <tr>
-                  <td>模型B</td>
+                  <td>Model B</td>
                   <td>79.2%</td>
                   <td>76.5%</td>
                   <td>108ms</td>
                 </tr>
                 <tr>
-                  <td>我们的方法</td>
+                  <td>Our Method</td>
                   <td>83.7%</td>
                   <td>80.9%</td>
                   <td>98ms</td>
@@ -403,37 +408,37 @@
         
         <div id="task3" class="tab-content" style="display:none">
           <div class="box">
-            <h3 class="title is-4 has-text-centered">任务3: 多模态融合</h3>
+            <h3 class="title is-4 has-text-centered">Task 3: Multimodal Fusion</h3>
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
-                  <th>模型</th>
-                  <th>准确率↑</th>
-                  <th>F1值↑</th>
-                  <th>延迟↓</th>
+                  <th>Model</th>
+                  <th>Accuracy↑</th>
+                  <th>F1 Score↑</th>
+                  <th>Latency↓</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>基线模型</td>
+                  <td>Baseline Model</td>
                   <td>65.1%</td>
                   <td>62.3%</td>
                   <td>145ms</td>
                 </tr>
                 <tr>
-                  <td>模型A</td>
+                  <td>Model A</td>
                   <td>71.8%</td>
                   <td>69.4%</td>
                   <td>125ms</td>
                 </tr>
                 <tr>
-                  <td>模型B</td>
+                  <td>Model B</td>
                   <td>77.3%</td>
                   <td>74.1%</td>
                   <td>112ms</td>
                 </tr>
                 <tr>
-                  <td>我们的方法</td>
+                  <td>Our Method</td>
                   <td>82.5%</td>
                   <td>79.8%</td>
                   <td>102ms</td>
@@ -447,32 +452,32 @@
   </div>
 </section>
 
-<!-- 5. 定量分析 -->
+<!-- 5. Quantitative Analysis -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">定量分析</h2>
+        <h2 class="title is-3 has-text-centered">Quantitative Analysis</h2>
         <div id="quantitative-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">热力图分析</h4>
-              <img src="static/images/heatmap.png" alt="热力图" width="80%"/>
-              <p>模型性能热力图：深蓝(最佳)→浅蓝(中等)→灰(最差)</p>
+              <h4 class="title is-4">Heatmap Analysis</h4>
+              <img src="static/images/heatmap.png" alt="Heatmap" width="80%"/>
+              <p>Model Performance Heatmap: Deep Blue (Best) → Light Blue (Medium) → Gray (Worst)</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">误差分布</h4>
-              <img src="static/images/error-distribution.png" alt="误差分布" width="80%"/>
-              <p>各模型在不同任务类型上的误差分布</p>
+              <h4 class="title is-4">Error Distribution</h4>
+              <img src="static/images/error-distribution.png" alt="Error Distribution" width="80%"/>
+              <p>Error distribution of different models across task types</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">跨任务对比</h4>
-              <img src="static/images/cross-task-comparison.png" alt="跨任务对比" width="80%"/>
-              <p>各模型在不同任务间的性能对比</p>
+              <h4 class="title is-4">Cross-Task Comparison</h4>
+              <img src="static/images/cross-task-comparison.png" alt="Cross-Task Comparison" width="80%"/>
+              <p>Performance comparison of models across different tasks</p>
             </div>
           </div>
         </div>
@@ -481,32 +486,32 @@
   </div>
 </section>
 
-<!-- 6. 定性分析 -->
+<!-- 6. Qualitative Analysis -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 has-text-centered">定性分析</h2>
+        <h2 class="title is-3 has-text-centered">Qualitative Analysis</h2>
         <div id="qualitative-carousel" class="carousel results-carousel">
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">错误案例</h4>
-              <img src="static/images/error-cases.png" alt="错误案例" width="80%"/>
-              <p>典型错误案例分析：红框标注错误区域</p>
+              <h4 class="title is-4">Error Cases</h4>
+              <img src="static/images/error-cases.png" alt="Error Cases" width="80%"/>
+              <p>Typical error case analysis: Red box marks error areas</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">改进对比</h4>
-              <img src="static/images/improvement-comparison.png" alt="改进对比" width="80%"/>
-              <p>基线模型与改进模型的输出对比</p>
+              <h4 class="title is-4">Improvement Comparison</h4>
+              <img src="static/images/improvement-comparison.png" alt="Improvement Comparison" width="80%"/>
+              <p>Output comparison between baseline and improved models</p>
             </div>
           </div>
           <div class="box m-5">
             <div class="content has-text-centered">
-              <h4 class="title is-4">典型修正</h4>
-              <img src="static/images/typical-corrections.png" alt="典型修正" width="80%"/>
-              <p>绿框标注成功修正的案例</p>
+              <h4 class="title is-4">Typical Corrections</h4>
+              <img src="static/images/typical-corrections.png" alt="Typical Corrections" width="80%"/>
+              <p>Green box marks successfully corrected cases</p>
             </div>
           </div>
         </div>
@@ -518,11 +523,11 @@
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3 has-text-centered">引用</h2>
-    <pre><code>@inproceedings{author2024xbench,
-  author    = {作者一 and 作者二 and 作者三 and 作者四},
-  title     = {XBench: 多模态评估基准},
-  booktitle = {会议名称},
+    <h2 class="title is-3 has-text-centered">Citation</h2>
+    <pre><code>@inproceedings{ma2024visaidmath,
+  author    = {Ma, Jingkun and Zhan, Runzhe and Wong, Derek F. and Li, Yang and Sun, Di and Chan, Hou Pong and Chao, Lidia S.},
+  title     = {VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning},
+  booktitle = {Conference Name},
   year      = {2024}
 }</code></pre>
   </div>
@@ -530,13 +535,13 @@
 
 <section>
   <div class="section" id="org-banners" style="display:flex">
-    <a href="#" target="_blank" rel="external">
+    <a href="https://www.um.edu.mo/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/org1.png">
     </a>
-    <a href="#" target="blank" class="ext-link">
+    <a href="https://www.um.edu.mo/" target="blank" class="ext-link">
         <img class="center-block org-banner" src="static/images/org2.png">
     </a>
-    <a href="#" target="_blank" rel="external">
+    <a href="https://damo.alibaba.com/" target="_blank" rel="external">
         <img class="center-block org-banner" src="static/images/org3.png">
     </a>
   </div>
@@ -547,7 +552,7 @@
     <div class="column is-8">
       <div class="content">
         <p>
-          本网站改编自 <a href="https://mathvista.github.io/">MathVista</a>，基于 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> 许可。
+          This website is adapted from <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
         </p>
       </div>
     </div>
@@ -555,7 +560,7 @@
 </footer>
 
 <script>
-  // 标签页切换功能
+  // Tab switching functionality
   document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.tabs li');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -575,7 +580,7 @@
       });
     });
     
-    // 初始化轮播
+    // Initialize carousel
     bulmaCarousel.attach('.carousel', {
       slidesToScroll: 1,
       slidesToShow: 1,
