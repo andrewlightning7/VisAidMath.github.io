@@ -669,75 +669,100 @@
 </footer>
 
 <script>
-  // 初始化轮播图
+  // 初始化轮播图 - 使用更简单但可靠的方法
   document.addEventListener('DOMContentLoaded', function() {
-    // 获取轮播图元素
-    const carousel = document.querySelector('#case-studies-carousel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const navLeft = carousel.querySelector('.carousel-nav-left');
-    const navRight = carousel.querySelector('.carousel-nav-right');
-    
-    // 设置初始状态
-    let currentIndex = 0;
-    updateCarousel();
-    
-    // 自动播放
-    let autoplayInterval = setInterval(nextSlide, 5000);
-    
-    // 下一张幻灯片
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % items.length;
-      updateCarousel();
-    }
-    
-    // 上一张幻灯片
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + items.length) % items.length;
-      updateCarousel();
-    }
-    
-    // 更新轮播图显示
-    function updateCarousel() {
+    // 等待一小段时间确保其他库（如MathJax）已完成初始化
+    setTimeout(function() {
+      // 获取轮播图元素
+      const carousel = document.querySelector('#case-studies-carousel');
+      const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+      const navLeft = carousel.querySelector('.carousel-nav-left');
+      const navRight = carousel.querySelector('.carousel-nav-right');
+      
+      // 确保所有项目初始状态正确
       items.forEach((item, index) => {
-        if (index === currentIndex) {
-          item.classList.add('is-active');
+        if (index === 0) {
           item.style.display = 'block';
+          item.classList.add('is-active');
         } else {
-          item.classList.remove('is-active');
           item.style.display = 'none';
+          item.classList.remove('is-active');
         }
       });
-    }
-    
-    // 添加导航事件监听
-    navLeft.addEventListener('click', function() {
-      clearInterval(autoplayInterval);
-      prevSlide();
-      autoplayInterval = setInterval(nextSlide, 5000);
-    });
-    
-    navRight.addEventListener('click', function() {
-      clearInterval(autoplayInterval);
-      nextSlide();
-      autoplayInterval = setInterval(nextSlide, 5000);
-    });
-    
-    // 鼠标悬停时暂停自动播放
-    carousel.addEventListener('mouseenter', function() {
-      clearInterval(autoplayInterval);
-    });
-    
-    carousel.addEventListener('mouseleave', function() {
-      autoplayInterval = setInterval(nextSlide, 5000);
-    });
+      
+      // 当前显示的索引
+      let currentIndex = 0;
+      
+      // 自动播放
+      let autoplayInterval = setInterval(showNextSlide, 5000);
+      
+      // 显示指定索引的幻灯片
+      function showSlide(index) {
+        // 隐藏当前幻灯片
+        items[currentIndex].style.display = 'none';
+        items[currentIndex].classList.remove('is-active');
+        
+        // 更新索引
+        currentIndex = index;
+        
+        // 显示新幻灯片
+        items[currentIndex].style.display = 'block';
+        items[currentIndex].classList.add('is-active');
+      }
+      
+      // 显示下一张幻灯片
+      function showNextSlide() {
+        const newIndex = (currentIndex + 1) % items.length;
+        showSlide(newIndex);
+      }
+      
+      // 显示上一张幻灯片
+      function showPrevSlide() {
+        const newIndex = (currentIndex - 1 + items.length) % items.length;
+        showSlide(newIndex);
+      }
+      
+      // 添加导航事件
+      if (navLeft) {
+        navLeft.addEventListener('click', function(e) {
+          e.preventDefault();
+          clearInterval(autoplayInterval);
+          showPrevSlide();
+          autoplayInterval = setInterval(showNextSlide, 5000);
+        });
+      }
+      
+      if (navRight) {
+        navRight.addEventListener('click', function(e) {
+          e.preventDefault();
+          clearInterval(autoplayInterval);
+          showNextSlide();
+          autoplayInterval = setInterval(showNextSlide, 5000);
+        });
+      }
+      
+      // 鼠标悬停暂停
+      carousel.addEventListener('mouseenter', function() {
+        clearInterval(autoplayInterval);
+      });
+      
+      carousel.addEventListener('mouseleave', function() {
+        autoplayInterval = setInterval(showNextSlide, 5000);
+      });
+      
+      // 确保初始状态正确
+      showSlide(0);
+      
+      // 添加调试信息
+      console.log('轮播图初始化完成，共' + items.length + '个项目');
+    }, 500); // 延迟500ms确保其他库已加载
   });
 </script>
 
 <style>
-  /* 轮播图样式 */
-  .carousel {
+  /* 轮播图基本样式 */
+  #case-studies-carousel {
     position: relative;
-    overflow: hidden;
   }
   
   .carousel-container {
@@ -745,12 +770,12 @@
   }
   
   .carousel-item {
-    display: none;
     width: 100%;
+    display: none; /* 默认隐藏所有项目 */
   }
   
   .carousel-item.is-active {
-    display: block;
+    display: block; /* 显示活动项目 */
   }
   
   /* 导航按钮样式 */
