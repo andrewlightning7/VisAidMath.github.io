@@ -684,21 +684,51 @@
 </script>
 
 <style>
-  /* 确保轮播图项目正确显示/隐藏 */
+  /* 修复轮播图显示问题 */
+  .carousel {
+    position: relative;
+    overflow: hidden;
+  }
+  
   .carousel-container {
+    display: flex;
     position: relative;
     width: 100%;
     overflow: hidden;
   }
   
   .carousel-item {
-    position: absolute;
+    flex: 0 0 100%;
     width: 100%;
-    transition: transform 0.5s ease;
+    display: none;
   }
   
   .carousel-item.is-active {
-    position: relative;
+    display: block;
+  }
+  
+  /* 确保第一个项目默认显示，直到JavaScript加载完成 */
+  .carousel-container .carousel-item:first-child {
+    display: block;
+  }
+  
+  /* 导航按钮样式 */
+  .carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .carousel-nav-left, .carousel-nav-right {
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>
 
