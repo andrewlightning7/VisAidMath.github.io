@@ -3,53 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="XBench: 一个跨领域多模态基准测试平台，用于评估和比较不同模型在多种任务上的表现。">
-  <meta name="keywords" content="XBench, 多模态, 基准测试, 数据可视化">
+        content="XBench: 多模态评估基准">
+  <meta name="keywords" content="XBench, 多模态, 评估基准">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>XBench: 跨领域多模态基准测试平台</title>
+  <title>XBench: 多模态评估基准</title>
 
-  <!-- 全局站点标签 (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+  <link rel="icon" href="./static/images/xbench-logo.png">
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./static/css/leaderboard.css">
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="./static/js/explorer-index.js"></script>
 </head>
 <body>
 
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="#">
-      <span class="icon">
-          <i class="fas fa-chart-bar"></i>
-      </span>
-      <strong>XBench</strong>
-    </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -58,28 +40,22 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#abstract">
-        摘要
-      </a>
-      <a class="navbar-item" href="#dataset">
-        数据集
-      </a>
-      <a class="navbar-item" href="#experiments">
-        实验
-      </a>
-      <a class="navbar-item" href="#examples">
-        示例
-      </a>
-      <a class="navbar-item" href="#analysis">
-        分析
-      </a>
-    </div>
-
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" href="#download">
-            <strong>下载数据集</strong>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          相关研究
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://mathvista.github.io/">
+            <b>MathVista</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://scienceqa.github.io/">
+            <b>ScienceQA</b> <p style="font-size:18px; display: inline; margin-left: 5px;">🔥</p>
+          </a>
+          <a class="navbar-item" href="https://promptpg.github.io/">
+            PromptPG
+          </a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2307.10635">
+            SciBench
           </a>
         </div>
       </div>
@@ -92,32 +68,34 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">XBench: 跨领域多模态基准测试平台</h1>
+          <h1 class="title is-1 publication-title is-bold">
+            <img src="static/images/xbench-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+            <span class="xbench" style="vertical-align: middle">XBench</span>
+          </h1>
+          <h2 class="subtitle is-3 publication-subtitle">
+            多模态评估基准
+          </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="#">张三</a><sup>1</sup>,</span>
+              <a href="#">作者一</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="#">李四</a><sup>1</sup>,</span>
+              <a href="#">作者二</a><sup style="color:#6fbf73;">1</sup>,</span>
             <span class="author-block">
-              <a href="#">王五</a><sup>2</sup>,
+              <a href="#">作者三</a><sup style="color:#ed4b82">2</sup>,
             </span>
             <span class="author-block">
-              <a href="#">赵六</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="#">钱七</a><sup>3</sup>
+              <a href="#">作者四</a><sup style="color:#ffac33">3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>北京大学,</span>
-            <span class="author-block"><sup>2</sup>清华大学,</span>
-            <span class="author-block"><sup>3</sup>中国科学院</span>
+            <span class="author-block"><sup style="color:#6fbf73;">1</sup>机构一,</span><br>
+            <span class="author-block"><sup style="color:#ed4b82">2</sup>机构二,</span>
+            <span class="author-block"><sup style="color:#ffac33">3</sup>机构三</span><br>
           </div>
-
+        
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF链接 -->
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
@@ -131,40 +109,29 @@
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- 视频链接 -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>视频</span>
-                </a>
-              </span>
-              <!-- 代码链接 -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>代码</span>
-                  </a>
+                </a>
               </span>
-              <!-- 数据集链接 -->
+              <span class="link-block">
+                <a href="#leaderboard"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <p style="font-size:18px">🏆</p>
+                  </span>
+                  <span>排行榜</span>
+                </a>
+              </span>
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <p style="font-size:18px">🌐</p>
                   </span>
-                  <span>数据集</span>
-                  </a>
+                  <span>演示</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -173,436 +140,340 @@
   </div>
 </section>
 
-<!-- 1. Abstract & Overview 部分 -->
-<section class="section" id="abstract">
-  <div class="container is-max-desktop">
-    <div class="columns">
-      <!-- 左侧栏 (60%) -->
-      <div class="column is-7">
-        <h2 class="title is-3">摘要</h2>
-        <div class="content has-text-justified">
-          <p>
-            XBench是一个全面的跨领域多模态基准测试平台，包含超过120万个样本，涵盖5种模态和3个难度级别。
-            我们的平台提供了统一的评估框架，使研究人员能够公平比较不同模型在各种任务上的表现。
-            实验结果表明，现有模型在跨领域任务上仍存在显著差距，特别是在高难度任务上。
-          </p>
+<!-- 1. 摘要部分 -->
+<section class="section">
+  <div class="container" style="margin-top: -150px; margin-bottom: -100px;">
+    <div class="columns is-centered m-6">
+      <div class="column is-full has-text-centered content">
+        <div class="box m-5">
+          <div class="content has-text-centered">
+            <h2 class="title is-3">XBench: 多模态评估基准</h2>
+            <p class="is-size-4">
+              • 数据量：1.2M样本 | 3层级难度 | 5类评估指标<br>
+              • 核心价值：首个支持跨领域推理的多模态基准测试
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 概述部分 -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">概述</h2>
+        
+        <!-- 2.1 关键特性和数据分布 -->
+        <div class="columns">
+          <!-- 左侧：关键特性 -->
+          <div class="column">
+            <div class="box">
+              <h3 class="title is-4">关键特性</h3>
+              <div class="content has-text-left">
+                <ul>
+                  <li>3类数据来源：学术论文、网络爬取、人工标注</li>
+                  <li>5级质量审核：初筛、清洗、标注、验证、评估</li>
+                  <li>多维度评估：准确率、F1值、延迟时间、资源消耗</li>
+                  <li>跨领域适用：科学、文学、多媒体内容</li>
+                </ul>
+              </div>
+            </div>
+          </div>
           
-          <h3 class="title is-4">关键特性</h3>
-          <div class="columns is-multiline">
-            <div class="column is-6">
-              <div class="box">
-                <article class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-database fa-2x"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>数据规模</strong>
-                        <br>
-                        120万个样本
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="box">
-                <article class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-tasks fa-2x"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>任务维度</strong>
-                        <br>
-                        5种模态 × 3个难度级别
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="box">
-                <article class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-chart-line fa-2x"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>评估指标</strong>
-                        <br>
-                        每个任务4种评估指标
-                      </p>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="column is-6">
-              <div class="box">
-                <article class="media">
-                  <div class="media-left">
-                    <span class="icon is-large">
-                      <i class="fas fa-users fa-2x"></i>
-                    </span>
-                  </div>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>专家标注</strong>
-                        <br>
-                        50+领域专家参与标注
-                      </p>
-                    </div>
-                  </div>
-                </article>
+          <!-- 右侧：数据分布 -->
+          <div class="column">
+            <div class="box">
+              <h3 class="title is-4">数据分布</h3>
+              <div class="content has-text-centered">
+                <img src="static/images/data-distribution.png" alt="数据分布" width="80%"/>
+                <p>数据来源百分比分布</p>
+                <img src="static/images/difficulty-levels.png" alt="难度等级" width="80%"/>
+                <p>难度等级分布</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <!-- 右侧栏 (40%) -->
-      <div class="column is-5">
-        <h2 class="title is-3">数据分布</h2>
-        <div class="box">
-          <figure class="image">
-            <img src="./static/images/data_distribution.png" alt="数据来源与难度级别分布">
-          </figure>
-          <p class="has-text-centered">
-            <strong>数据来源与难度级别分布</strong>
-          </p>
+        
+        <!-- 2.2 模型雷达图 -->
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <div class="box">
+              <h3 class="title is-4">模型性能对比</h3>
+              <div class="content has-text-centered">
+                <img src="static/images/radar-chart.png" alt="模型雷达图" width="70%"/>
+                <p>五维性能对比：基线模型 / 模型A / 模型B / 我们的方法</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2. Dataset Characteristics 部分 -->
-<section class="section" id="dataset">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">数据集特性</h2>
-    <div class="columns">
-      <!-- 左侧栏 (60%) -->
-      <div class="column is-7">
-        <div class="box">
-          <h3 class="title is-4">核心数据统计</h3>
-          <div class="table-container">
-            <table class="table is-striped is-hoverable is-fullwidth">
+<!-- 3. 数据集特性 -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 xbench">
+      <img src="static/images/xbench-logo.png" style="width:1em;vertical-align: middle" alt="Logo"/>
+      <span class="xbench" style="vertical-align: middle">XBench 数据集</span>
+    </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <!-- 3.1 数据源表格 -->
+        <h2 class="title is-3">数据来源</h2>
+        <div class="content">
+          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>数据来源</th>
+                <th>详情</th>
+                <th>难度等级</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>学术论文</td>
+                <td>经术语标准化处理</td>
+                <td>L3</td>
+              </tr>
+              <tr>
+                <td>网络爬取</td>
+                <td>隐私信息脱敏</td>
+                <td>L2</td>
+              </tr>
+              <tr>
+                <td>人工标注</td>
+                <td>多轮质量审核</td>
+                <td>L1-L3</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- 3.2 标注流程 -->
+        <h2 class="title is-3">标注流程</h2>
+        <div class="content has-text-centered">
+          <img src="static/images/annotation-flow.png" alt="标注流程" width="80%"/>
+          <p>数据处理流程：1. 数据源收集 → 2. 数据清洗 → 3. 标注 → 4. 验证<br>
+          • 关键节点：红色标注质量检查点</p>
+        </div>
+        
+        <!-- 3.3 任务示例 -->
+        <h2 class="title is-3">任务示例</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">科学类</h4>
+              <img src="static/images/science-example.png" alt="科学类示例" width="70%"/>
+              <p>科学类任务示例及模型输出</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">文学类</h4>
+              <img src="static/images/literature-example.png" alt="文学类示例" width="70%"/>
+              <p>文学类任务示例及模型输出</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">多模态</h4>
+              <img src="static/images/multimodal-example.png" alt="多模态示例" width="70%"/>
+              <p>多模态任务示例及模型输出</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 实验结果 -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <h1 class="title is-1 xbench">实验结果</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- 4.1 任务Tab页 -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="tabs is-centered is-boxed">
+          <ul>
+            <li class="is-active"><a data-tab="task1">任务1</a></li>
+            <li><a data-tab="task2">任务2</a></li>
+            <li><a data-tab="task3">任务3</a></li>
+          </ul>
+        </div>
+        
+        <div id="task1" class="tab-content">
+          <div class="box">
+            <h3 class="title is-4 has-text-centered">任务1: 科学推理</h3>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
               <thead>
                 <tr>
-                  <th>类别</th>
-                  <th>样本数</th>
-                  <th>平均长度</th>
-                  <th>标注者</th>
+                  <th>模型</th>
+                  <th>准确率↑</th>
+                  <th>F1值↑</th>
+                  <th>延迟↓</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>科学</td>
-                  <td>350,000</td>
-                  <td>128 tokens</td>
-                  <td>5位专家</td>
+                  <td>基线模型</td>
+                  <td>72.3%</td>
+                  <td>68.5%</td>
+                  <td>120ms</td>
                 </tr>
                 <tr>
-                  <td>文学</td>
-                  <td>280,000</td>
-                  <td>156 tokens</td>
-                  <td>8位专家</td>
+                  <td>模型A</td>
+                  <td>78.1%</td>
+                  <td>75.2%</td>
+                  <td>110ms</td>
                 </tr>
                 <tr>
-                  <td>医学</td>
-                  <td>220,000</td>
-                  <td>112 tokens</td>
-                  <td>12位专家</td>
+                  <td>模型B</td>
+                  <td>81.5%</td>
+                  <td>79.8%</td>
+                  <td>105ms</td>
                 </tr>
                 <tr>
-                  <td>法律</td>
-                  <td>180,000</td>
-                  <td>205 tokens</td>
-                  <td>7位专家</td>
+                  <td>我们的方法</td>
+                  <td>85.1%</td>
+                  <td>82.3%</td>
+                  <td>95ms</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div id="task2" class="tab-content" style="display:none">
+          <div class="box">
+            <h3 class="title is-4 has-text-centered">任务2: 文学理解</h3>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>模型</th>
+                  <th>准确率↑</th>
+                  <th>F1值↑</th>
+                  <th>延迟↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>基线模型</td>
+                  <td>68.7%</td>
+                  <td>65.2%</td>
+                  <td>130ms</td>
                 </tr>
                 <tr>
-                  <td>工程</td>
-                  <td>170,000</td>
-                  <td>98 tokens</td>
-                  <td>9位专家</td>
+                  <td>模型A</td>
+                  <td>74.5%</td>
+                  <td>71.8%</td>
+                  <td>115ms</td>
+                </tr>
+                <tr>
+                  <td>模型B</td>
+                  <td>79.2%</td>
+                  <td>76.5%</td>
+                  <td>108ms</td>
+                </tr>
+                <tr>
+                  <td>我们的方法</td>
+                  <td>83.7%</td>
+                  <td>80.9%</td>
+                  <td>98ms</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div id="task3" class="tab-content" style="display:none">
+          <div class="box">
+            <h3 class="title is-4 has-text-centered">任务3: 多模态融合</h3>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>模型</th>
+                  <th>准确率↑</th>
+                  <th>F1值↑</th>
+                  <th>延迟↓</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>基线模型</td>
+                  <td>65.1%</td>
+                  <td>62.3%</td>
+                  <td>145ms</td>
+                </tr>
+                <tr>
+                  <td>模型A</td>
+                  <td>71.8%</td>
+                  <td>69.4%</td>
+                  <td>125ms</td>
+                </tr>
+                <tr>
+                  <td>模型B</td>
+                  <td>77.3%</td>
+                  <td>74.1%</td>
+                  <td>112ms</td>
+                </tr>
+                <tr>
+                  <td>我们的方法</td>
+                  <td>82.5%</td>
+                  <td>79.8%</td>
+                  <td>102ms</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </div>
-      
-      <!-- 右侧栏 (40%) -->
-      <div class="column is-5">
-        <div class="box">
-          <h3 class="title is-4">难度分布雷达图</h3>
-          <figure class="image">
-            <img src="./static/images/difficulty_radar.png" alt="不同任务类别的难度分布">
-          </figure>
-          <p class="has-text-centered">
-            <strong>不同任务类别的难度分布</strong>
-            <br>
-            <small>（语法/逻辑/领域知识等维度）</small>
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- 3. Benchmark Results 部分 -->
-<section class="section" id="experiments">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">基准测试结果</h2>
-    
-    <!-- 3.1 Main Results Table -->
-    <div class="box">
-      <h3 class="title is-4">主要结果</h3>
-      <div class="table-container">
-        <table class="table is-striped is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              <th>模型</th>
-              <th>准确率 ↑</th>
-              <th>F1分数 ↑</th>
-              <th>延迟 ↓</th>
-              <th>参数量</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>基线模型</td>
-              <td>72.3%</td>
-              <td>68.5%</td>
-              <td>120ms</td>
-              <td>1.2B</td>
-            </tr>
-            <tr>
-              <td>模型A</td>
-              <td>78.6%</td>
-              <td>75.2%</td>
-              <td>105ms</td>
-              <td>2.5B</td>
-            </tr>
-            <tr>
-              <td>模型B</td>
-              <td>81.4%</td>
-              <td>79.8%</td>
-              <td>98ms</td>
-              <td>3.8B</td>
-            </tr>
-            <tr>
-              <td><strong>我们的方法</strong></td>
-              <td><strong>85.1%</strong></td>
-              <td><strong>82.3%</strong></td>
-              <td>95ms</td>
-              <td>3.2B</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    
-    <!-- 3.2 Visual Analysis Grid -->
-    <div class="columns">
-      <!-- 左侧：多模型对比雷达图 -->
-      <div class="column is-4">
-        <div class="box">
-          <h3 class="title is-5">多模型对比</h3>
-          <figure class="image">
-            <img src="./static/images/model_comparison.png" alt="多模型对比雷达图">
-          </figure>
-          <p class="has-text-centered">
-            <small>5个评估维度的模型表现对比</small>
-          </p>
-        </div>
-      </div>
-      
-      <!-- 中间：任务可视化对比 -->
-      <div class="column is-4">
-        <div class="box">
-          <h3 class="title is-5">任务可视化对比</h3>
-          <figure class="image">
-            <img src="./static/images/task_visualization.png" alt="任务可视化对比">
-          </figure>
-          <p class="has-text-centered">
-            <small>Before-After示意图</small>
-          </p>
-        </div>
-      </div>
-      
-      <!-- 右侧：误差分布热力图 -->
-      <div class="column is-4">
-        <div class="box">
-          <h3 class="title is-5">误差分布热力图</h3>
-          <figure class="image">
-            <img src="./static/images/error_heatmap.png" alt="误差分布热力图">
-          </figure>
-          <p class="has-text-centered">
-            <small>模型在各子类别的表现</small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. Qualitative Analysis 部分 -->
-<section class="section" id="examples">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">定性分析</h2>
-    <div class="columns">
-      <!-- 左侧：案例研究 -->
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-4">案例研究</h3>
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="box m-5">
-              <div class="card">
-                <div class="card-content">
-                  <p class="title is-5">成功案例 #1</p>
-                  <div class="content">
-                    <p>问题：计算以下积分 $\int x^2 \sin(x) dx$</p>
-                    <p>模型回答：<span style="background-color: #d4edda;">使用分部积分法，令 $u=x^2$, $dv=\sin(x)dx$</span>。
-                    则 $du=2xdx$, $v=-\cos(x)$。
-                    <span style="background-color: #d4edda;">$\int x^2 \sin(x) dx = -x^2\cos(x) + \int 2x\cos(x)dx$</span>
-                    再次使用分部积分...最终结果为 $-x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C$</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="box m-5">
-              <div class="card">
-                <div class="card-content">
-                  <p class="title is-5">失败案例 #1</p>
-                  <div class="content">
-                    <p>问题：解释量子纠缠的基本原理</p>
-                    <p>模型回答：量子纠缠是指两个粒子<span style="background-color: #f8d7da;">无论相距多远都能瞬时影响对方</span>。
-                    这种现象<span style="background-color: #f8d7da;">违反了光速限制</span>，被爱因斯坦称为"鬼魅般的超距作用"。
-                    实际上，量子纠缠并不允许超光速信息传递，而是表明粒子状态的关联性。</p>
-                  </div>
-                </div>
-              </div>
+<!-- 5. 定量分析 -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">定量分析</h2>
+        <div id="quantitative-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">热力图分析</h4>
+              <img src="static/images/heatmap.png" alt="热力图" width="80%"/>
+              <p>模型性能热力图：深蓝(最佳)→浅蓝(中等)→灰(最差)</p>
             </div>
           </div>
-        </div>
-      </div>
-      
-      <!-- 右侧：推理链可视化 -->
-      <div class="column is-6">
-        <div class="box">
-          <h3 class="title is-4">推理链可视化</h3>
-          <figure class="image">
-            <img src="./static/images/reasoning_chains.png" alt="推理链流程图对比">
-          </figure>
-          <p class="has-text-centered">
-            <strong>基线模型 vs 我们的方法</strong>
-            <br>
-            <small>关键决策点用不同颜色标注置信度</small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. Interactive Exploration 部分 -->
-<section class="section" id="analysis">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">交互式探索</h2>
-    <div class="box">
-      <div class="columns">
-        <div class="column is-3">
-          <aside class="menu">
-            <p class="menu-label">
-              过滤器
-            </p>
-            <ul class="menu-list">
-              <li>
-                <p>模型选择</p>
-                <ul>
-                  <li><a>基线模型</a></li>
-                  <li><a>模型A</a></li>
-                  <li><a>模型B</a></li>
-                  <li><a>我们的方法</a></li>
-                </ul>
-              </li>
-              <li>
-                <p>任务类别</p>
-                <ul>
-                  <li><a>科学</a></li>
-                  <li><a>文学</a></li>
-                  <li><a>医学</a></li>
-                  <li><a>法律</a></li>
-                  <li><a>工程</a></li>
-                </ul>
-              </li>
-              <li>
-                <p>难度级别</p>
-                <ul>
-                  <li><a>简单</a></li>
-                  <li><a>中等</a></li>
-                  <li><a>困难</a></li>
-                </ul>
-              </li>
-            </ul>
-          </aside>
-        </div>
-        <div class="column is-9">
-          <figure class="image">
-            <img src="./static/images/interactive_dashboard.png" alt="交互式仪表板">
-          </figure>
-          <p class="has-text-centered">
-            <small>注：实际网站中，此部分将是交互式的仪表板</small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 下载部分 -->
-<section class="section" id="download">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">数据集下载</h2>
-    <div class="box">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p class="has-text-centered">
-              我们的数据集分为多个部分，您可以根据需要下载相应的部分。
-              所有数据均以JSON格式提供，并附带详细的文档说明。
-            </p>
-            <div class="buttons is-centered">
-              <a class="button is-primary is-medium">
-                <span class="icon">
-                  <i class="fas fa-download"></i>
-                </span>
-                <span>完整数据集 (8.2GB)</span>
-              </a>
-              <a class="button is-info is-medium">
-                <span class="icon">
-                  <i class="fas fa-download"></i>
-                </span>
-                <span>示例数据 (120MB)</span>
-              </a>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">误差分布</h4>
+              <img src="static/images/error-distribution.png" alt="误差分布" width="80%"/>
+              <p>各模型在不同任务类型上的误差分布</p>
             </div>
-            <p class="has-text-centered">
-              <small>使用本数据集请引用我们的论文</small>
-            </p>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">跨任务对比</h4>
+              <img src="static/images/cross-task-comparison.png" alt="跨任务对比" width="80%"/>
+              <p>各模型在不同任务间的性能对比</p>
+            </div>
           </div>
         </div>
       </div>
@@ -610,98 +481,109 @@
   </div>
 </section>
 
-<!-- BibTeX 部分 -->
+<!-- 6. 定性分析 -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">定性分析</h2>
+        <div id="qualitative-carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">错误案例</h4>
+              <img src="static/images/error-cases.png" alt="错误案例" width="80%"/>
+              <p>典型错误案例分析：红框标注错误区域</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">改进对比</h4>
+              <img src="static/images/improvement-comparison.png" alt="改进对比" width="80%"/>
+              <p>基线模型与改进模型的输出对比</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <h4 class="title is-4">典型修正</h4>
+              <img src="static/images/typical-corrections.png" alt="典型修正" width="80%"/>
+              <p>绿框标注成功修正的案例</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">引用</h2>
-    <pre><code>@article{zhang2023xbench,
-  author    = {张三 and 李四 and 王五 and 赵六 and 钱七},
-  title     = {XBench: 跨领域多模态基准测试平台},
-  journal   = {人工智能学报},
-  year      = {2023},
-  volume    = {42},
-  number    = {3},
-  pages     = {1--15},
+    <pre><code>@inproceedings{author2024xbench,
+  author    = {作者一 and 作者二 and 作者三 and 作者四},
+  title     = {XBench: 多模态评估基准},
+  booktitle = {会议名称},
+  year      = {2024}
 }</code></pre>
   </div>
 </section>
 
-<!-- 页脚 -->
+<section>
+  <div class="section" id="org-banners" style="display:flex">
+    <a href="#" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/org1.png">
+    </a>
+    <a href="#" target="blank" class="ext-link">
+        <img class="center-block org-banner" src="static/images/org2.png">
+    </a>
+    <a href="#" target="_blank" rel="external">
+        <img class="center-block org-banner" src="static/images/org3.png">
+    </a>
+  </div>
+</section>
+
 <footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              <strong>XBench</strong> 由北京大学、清华大学和中国科学院联合开发。
-            </p>
-            <p>
-              本网站采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可。
-            </p>
-            <p>
-              <a href="#">
-                <span class="icon">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span>联系我们</span>
-              </a>
-            </p>
-          </div>
-        </div>
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          本网站改编自 <a href="https://mathvista.github.io/">MathVista</a>，基于 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> 许可。
+        </p>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // 初始化轮播图
-  document.addEventListener('DOMContentLoaded', function() {
-    bulmaCarousel.attach('#results-carousel', {
+  // 标签页切换功能
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.tabs li');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(item => item.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        
+        const target = tab.querySelector('a').getAttribute('data-tab');
+        
+        tabContents.forEach(content => {
+          content.style.display = 'none';
+        });
+        
+        document.getElementById(target).style.display = 'block';
+      });
+    });
+    
+    // 初始化轮播
+    bulmaCarousel.attach('.carousel', {
       slidesToScroll: 1,
       slidesToShow: 1,
       infinite: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      pauseOnHover: true
+      autoplay: false
     });
   });
 </script>
-
-<style>
-  /* 轮播图样式 */
-  .results-carousel {
-    margin: 0 auto;
-  }
-  
-  .results-carousel .box {
-    margin: 2px;
-    padding: 16px;
-  }
-  
-  .results-carousel .card {
-    box-shadow: none;
-  }
-  
-  /* 确保轮播图内容正确显示 */
-  .carousel-container {
-    height: auto !important;
-  }
-  
-  /* 导航按钮样式 */
-  .carousel-navigation-next, 
-  .carousel-navigation-previous {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-    height: 2.5em;
-    width: 2.5em;
-  }
-  
-  .carousel-navigation-next:hover, 
-  .carousel-navigation-previous:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-</style>
 
 </body>
 </html>
