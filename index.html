@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="XBench: 一个跨领域多模态基准测试平台，用于评估和比较不同模型在多种任务上的表现。">
+  <meta name="keywords" content="XBench, 多模态, 基准测试, 数据可视化">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>XBench: 跨领域多模态基准测试平台</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- 全局站点标签 (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -42,8 +42,14 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-chart-bar"></i>
+      </span>
+      <strong>XBench</strong>
+    </a>
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -52,84 +58,77 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+      <a class="navbar-item" href="#abstract">
+        摘要
       </a>
+      <a class="navbar-item" href="#dataset">
+        数据集
+      </a>
+      <a class="navbar-item" href="#experiments">
+        实验
+      </a>
+      <a class="navbar-item" href="#examples">
+        示例
+      </a>
+      <a class="navbar-item" href="#analysis">
+        分析
+      </a>
+    </div>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" href="#download">
+            <strong>下载数据集</strong>
           </a>
         </div>
       </div>
     </div>
-
   </div>
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">XBench: 跨领域多模态基准测试平台</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="#">张三</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="#">李四</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="#">王五</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="#">赵六</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="#">钱七</a><sup>3</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>北京大学,</span>
+            <span class="author-block"><sup>2</sup>清华大学,</span>
+            <span class="author-block"><sup>3</sup>中国科学院</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
+              <!-- PDF链接 -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>论文</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,37 +136,36 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
+              <!-- 视频链接 -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video</span>
+                  <span>视频</span>
                 </a>
               </span>
-              <!-- Code Link. -->
+              <!-- 代码链接 -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>代码</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
+              <!-- 数据集链接 -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>数据集</span>
                   </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -175,316 +173,498 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- 1. Abstract & Overview 部分 -->
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+    <div class="columns">
+      <!-- 左侧栏 (60%) -->
+      <div class="column is-7">
+        <h2 class="title is-3">摘要</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            XBench是一个全面的跨领域多模态基准测试平台，包含超过120万个样本，涵盖5种模态和3个难度级别。
+            我们的平台提供了统一的评估框架，使研究人员能够公平比较不同模型在各种任务上的表现。
+            实验结果表明，现有模型在跨领域任务上仍存在显著差距，特别是在高难度任务上。
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+          
+          <h3 class="title is-4">关键特性</h3>
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-database fa-2x"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>数据规模</strong>
+                        <br>
+                        120万个样本
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
+            <div class="column is-6">
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-tasks fa-2x"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>任务维度</strong>
+                        <br>
+                        5种模态 × 3个难度级别
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-chart-line fa-2x"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>评估指标</strong>
+                        <br>
+                        每个任务4种评估指标
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="box">
+                <article class="media">
+                  <div class="media-left">
+                    <span class="icon is-large">
+                      <i class="fas fa-users fa-2x"></i>
+                    </span>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <strong>专家标注</strong>
+                        <br>
+                        50+领域专家参与标注
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+      </div>
+      
+      <!-- 右侧栏 (40%) -->
+      <div class="column is-5">
+        <h2 class="title is-3">数据分布</h2>
+        <div class="box">
+          <figure class="image">
+            <img src="./static/images/data_distribution.png" alt="数据来源与难度级别分布">
+          </figure>
+          <p class="has-text-centered">
+            <strong>数据来源与难度级别分布</strong>
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
 
+<!-- 2. Dataset Characteristics 部分 -->
+<section class="section" id="dataset">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">数据集特性</h2>
+    <div class="columns">
+      <!-- 左侧栏 (60%) -->
+      <div class="column is-7">
+        <div class="box">
+          <h3 class="title is-4">核心数据统计</h3>
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>类别</th>
+                  <th>样本数</th>
+                  <th>平均长度</th>
+                  <th>标注者</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>科学</td>
+                  <td>350,000</td>
+                  <td>128 tokens</td>
+                  <td>5位专家</td>
+                </tr>
+                <tr>
+                  <td>文学</td>
+                  <td>280,000</td>
+                  <td>156 tokens</td>
+                  <td>8位专家</td>
+                </tr>
+                <tr>
+                  <td>医学</td>
+                  <td>220,000</td>
+                  <td>112 tokens</td>
+                  <td>12位专家</td>
+                </tr>
+                <tr>
+                  <td>法律</td>
+                  <td>180,000</td>
+                  <td>205 tokens</td>
+                  <td>7位专家</td>
+                </tr>
+                <tr>
+                  <td>工程</td>
+                  <td>170,000</td>
+                  <td>98 tokens</td>
+                  <td>9位专家</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 右侧栏 (40%) -->
+      <div class="column is-5">
+        <div class="box">
+          <h3 class="title is-4">难度分布雷达图</h3>
+          <figure class="image">
+            <img src="./static/images/difficulty_radar.png" alt="不同任务类别的难度分布">
+          </figure>
+          <p class="has-text-centered">
+            <strong>不同任务类别的难度分布</strong>
+            <br>
+            <small>（语法/逻辑/领域知识等维度）</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- 3. Benchmark Results 部分 -->
+<section class="section" id="experiments">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">基准测试结果</h2>
+    
+    <!-- 3.1 Main Results Table -->
+    <div class="box">
+      <h3 class="title is-4">主要结果</h3>
+      <div class="table-container">
+        <table class="table is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>模型</th>
+              <th>准确率 ↑</th>
+              <th>F1分数 ↑</th>
+              <th>延迟 ↓</th>
+              <th>参数量</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>基线模型</td>
+              <td>72.3%</td>
+              <td>68.5%</td>
+              <td>120ms</td>
+              <td>1.2B</td>
+            </tr>
+            <tr>
+              <td>模型A</td>
+              <td>78.6%</td>
+              <td>75.2%</td>
+              <td>105ms</td>
+              <td>2.5B</td>
+            </tr>
+            <tr>
+              <td>模型B</td>
+              <td>81.4%</td>
+              <td>79.8%</td>
+              <td>98ms</td>
+              <td>3.8B</td>
+            </tr>
+            <tr>
+              <td><strong>我们的方法</strong></td>
+              <td><strong>85.1%</strong></td>
+              <td><strong>82.3%</strong></td>
+              <td>95ms</td>
+              <td>3.2B</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- 3.2 Visual Analysis Grid -->
+    <div class="columns">
+      <!-- 左侧：多模型对比雷达图 -->
+      <div class="column is-4">
+        <div class="box">
+          <h3 class="title is-5">多模型对比</h3>
+          <figure class="image">
+            <img src="./static/images/model_comparison.png" alt="多模型对比雷达图">
+          </figure>
+          <p class="has-text-centered">
+            <small>5个评估维度的模型表现对比</small>
+          </p>
+        </div>
+      </div>
+      
+      <!-- 中间：任务可视化对比 -->
+      <div class="column is-4">
+        <div class="box">
+          <h3 class="title is-5">任务可视化对比</h3>
+          <figure class="image">
+            <img src="./static/images/task_visualization.png" alt="任务可视化对比">
+          </figure>
+          <p class="has-text-centered">
+            <small>Before-After示意图</small>
+          </p>
+        </div>
+      </div>
+      
+      <!-- 右侧：误差分布热力图 -->
+      <div class="column is-4">
+        <div class="box">
+          <h3 class="title is-5">误差分布热力图</h3>
+          <figure class="image">
+            <img src="./static/images/error_heatmap.png" alt="误差分布热力图">
+          </figure>
+          <p class="has-text-centered">
+            <small>模型在各子类别的表现</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Qualitative Analysis 部分 -->
+<section class="section" id="examples">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">定性分析</h2>
+    <div class="columns">
+      <!-- 左侧：案例研究 -->
+      <div class="column is-6">
+        <div class="box">
+          <h3 class="title is-4">案例研究</h3>
+          <div id="case-studies-carousel" class="carousel">
+            <div class="item">
+              <div class="card">
+                <div class="card-content">
+                  <p class="title is-5">成功案例 #1</p>
+                  <div class="content">
+                    <p>问题：计算以下积分 $\int x^2 \sin(x) dx$</p>
+                    <p>模型回答：<span style="background-color: #d4edda;">使用分部积分法，令 $u=x^2$, $dv=\sin(x)dx$</span>。
+                    则 $du=2xdx$, $v=-\cos(x)$。
+                    <span style="background-color: #d4edda;">$\int x^2 \sin(x) dx = -x^2\cos(x) + \int 2x\cos(x)dx$</span>
+                    再次使用分部积分...最终结果为 $-x^2\cos(x) + 2x\sin(x) + 2\cos(x) + C$</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                <div class="card-content">
+                  <p class="title is-5">失败案例 #1</p>
+                  <div class="content">
+                    <p>问题：解释量子纠缠的基本原理</p>
+                    <p>模型回答：量子纠缠是指两个粒子<span style="background-color: #f8d7da;">无论相距多远都能瞬时影响对方</span>。
+                    这种现象<span style="background-color: #f8d7da;">违反了光速限制</span>，被爱因斯坦称为"鬼魅般的超距作用"。
+                    实际上，量子纠缠并不允许超光速信息传递，而是表明粒子状态的关联性。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 右侧：推理链可视化 -->
+      <div class="column is-6">
+        <div class="box">
+          <h3 class="title is-4">推理链可视化</h3>
+          <figure class="image">
+            <img src="./static/images/reasoning_chains.png" alt="推理链流程图对比">
+          </figure>
+          <p class="has-text-centered">
+            <strong>基线模型 vs 我们的方法</strong>
+            <br>
+            <small>关键决策点用不同颜色标注置信度</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Interactive Exploration 部分 -->
+<section class="section" id="analysis">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">交互式探索</h2>
+    <div class="box">
+      <div class="columns">
+        <div class="column is-3">
+          <aside class="menu">
+            <p class="menu-label">
+              过滤器
+            </p>
+            <ul class="menu-list">
+              <li>
+                <p>模型选择</p>
+                <ul>
+                  <li><a>基线模型</a></li>
+                  <li><a>模型A</a></li>
+                  <li><a>模型B</a></li>
+                  <li><a>我们的方法</a></li>
+                </ul>
+              </li>
+              <li>
+                <p>任务类别</p>
+                <ul>
+                  <li><a>科学</a></li>
+                  <li><a>文学</a></li>
+                  <li><a>医学</a></li>
+                  <li><a>法律</a></li>
+                  <li><a>工程</a></li>
+                </ul>
+              </li>
+              <li>
+                <p>难度级别</p>
+                <ul>
+                  <li><a>简单</a></li>
+                  <li><a>中等</a></li>
+                  <li><a>困难</a></li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="column is-9">
+          <figure class="image">
+            <img src="./static/images/interactive_dashboard.png" alt="交互式仪表板">
+          </figure>
+          <p class="has-text-centered">
+            <small>注：实际网站中，此部分将是交互式的仪表板</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 下载部分 -->
+<section class="section" id="download">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">数据集下载</h2>
+    <div class="box">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p class="has-text-centered">
+              我们的数据集分为多个部分，您可以根据需要下载相应的部分。
+              所有数据均以JSON格式提供，并附带详细的文档说明。
+            </p>
+            <div class="buttons is-centered">
+              <a class="button is-primary is-medium">
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>完整数据集 (8.2GB)</span>
+              </a>
+              <a class="button is-info is-medium">
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>示例数据 (120MB)</span>
+              </a>
+            </div>
+            <p class="has-text-centered">
+              <small>使用本数据集请引用我们的论文</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BibTeX 部分 -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <h2 class="title is-3 has-text-centered">引用</h2>
+    <pre><code>@article{zhang2023xbench,
+  author    = {张三 and 李四 and 王五 and 赵六 and 钱七},
+  title     = {XBench: 跨领域多模态基准测试平台},
+  journal   = {人工智能学报},
+  year      = {2023},
+  volume    = {42},
+  number    = {3},
+  pages     = {1--15},
 }</code></pre>
   </div>
 </section>
 
-
+<!-- 页脚 -->
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              <strong>XBench</strong> 由北京大学、清华大学和中国科学院联合开发。
+            </p>
+            <p>
+              本网站采用 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可。
+            </p>
+            <p>
+              <a href="#">
+                <span class="icon">
+                  <i class="fas fa-envelope"></i>
+                </span>
+                <span>联系我们</span>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  // 初始化轮播图
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousels = bulmaCarousel.attach('#case-studies-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true
+    });
+  });
+</script>
 
 </body>
 </html>
