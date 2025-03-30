@@ -102,12 +102,12 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#"
+                <a href="https://arxiv.org/abs/2410.22995"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>arXiv</span>
                 </a>
               </span>
               <span class="link-block">
@@ -154,7 +154,7 @@
           <div class="content has-text-centered">
             <h2 class="title is-3">VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning</h2>
             <p class="is-size-4">
-              • Dataset: 1.2M samples | 3 difficulty levels | 5 evaluation metrics<br>
+              • Dataset: 1.2K samples | 16 data sources | 7 visual-aid types | 3 difficulty levels | 3 mathematical branches<br>
               • Core Value: First benchmark supporting cross-domain visual-aided mathematical reasoning
             </p>
           </div>
@@ -175,14 +175,15 @@
         <div class="columns">
           <!-- Left: Key Features -->
           <div class="column">
-            <div class="box">
+            <div class="box" style="height: 100%;">
               <h3 class="title is-4">Key Features</h3>
               <div class="content has-text-left">
                 <ul>
-                  <li>3 data sources: academic papers, web crawling, human annotation</li>
-                  <li>5-level quality review: screening, cleaning, annotation, validation, evaluation</li>
-                  <li>Multi-dimensional evaluation: accuracy, F1 score, latency, resource consumption</li>
-                  <li>Cross-domain applicability: science, literature, multimedia content</li>
+                  <li>16 diverse data sources across academic and educational domains</li>
+                  <li>7 types of visual aids supporting mathematical reasoning</li>
+                  <li>3 mathematical branches: algebra, geometry, and calculus</li>
+                  <li>3-level difficulty classification for comprehensive evaluation</li>
+                  <li>Cross-domain visual-mathematical reasoning assessment</li>
                 </ul>
               </div>
             </div>
@@ -190,13 +191,11 @@
           
           <!-- Right: Data Distribution -->
           <div class="column">
-            <div class="box">
+            <div class="box" style="height: 100%;">
               <h3 class="title is-4">Data Distribution</h3>
               <div class="content has-text-centered">
                 <img src="static/images/data-distribution.png" alt="Data Distribution" width="80%"/>
                 <p>Data Source Percentage Distribution</p>
-                <img src="static/images/difficulty-levels.png" alt="Difficulty Levels" width="80%"/>
-                <p>Difficulty Level Distribution</p>
               </div>
             </div>
           </div>
@@ -272,28 +271,18 @@
           • Key Nodes: Red annotation quality checkpoints</p>
         </div>
         
-        <!-- 3.3 Task Examples -->
-        <h2 class="title is-3">Task Examples</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h4 class="title is-4">Scientific</h4>
-              <img src="static/images/science-example.png" alt="Scientific Example" width="70%"/>
-              <p>Scientific task example and model output</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h4 class="title is-4">Literature</h4>
-              <img src="static/images/literature-example.png" alt="Literature Example" width="70%"/>
-              <p>Literature task example and model output</p>
-            </div>
-          </div>
-          <div class="box m-5">
-            <div class="content has-text-centered">
-              <h4 class="title is-4">Multimodal</h4>
-              <img src="static/images/multimodal-example.png" alt="Multimodal Example" width="70%"/>
-              <p>Multimodal task example and model output</p>
+        <!-- 3.3 Task Examples 改为 Task Comparison -->
+        <h2 class="title is-3">Task Comparison</h2>
+        <div class="box">
+          <div class="content">
+            <p class="has-text-left">
+              VisAidMath evaluates models across different mathematical reasoning tasks that require visual understanding. 
+              Below we compare how different models perform on representative tasks from our benchmark. 
+              The comparison highlights the varying capabilities of models to integrate visual information with mathematical reasoning.
+            </p>
+            <div class="has-text-centered">
+              <img src="static/images/task-comparison.png" alt="Task Comparison" width="90%"/>
+              <p>Comparison of model outputs across different visual-aided mathematical reasoning tasks</p>
             </div>
           </div>
         </div>
