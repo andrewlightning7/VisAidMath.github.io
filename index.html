@@ -121,7 +121,6 @@
       <div class="column is-full has-text-centered content">
         <div class="box m-5">
           <div class="content has-text-centered">
-            <h2 class="title is-3">VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning</h2>
             <p class="is-size-4">
               • Dataset: 1.2K samples | 16 data sources | 7 visual-aid types | 3 difficulty levels | 3 math branches<br>
               • Core Value: First benchmark supporting cross-domain visual-aided mathematical reasoning
@@ -161,10 +160,13 @@
           <!-- Right: Data Distribution -->
           <div class="column">
             <div class="box" style="height: 100%;">
-              <h3 class="title is-4">Data Distribution</h3>
+              <h3 class="title is-4">Dataset Comparison</h3>
               <div class="content has-text-centered">
-                <img src="static/images/dataset/dataset_comparison.png" alt="Data Distribution" width="80%"/>
-                <p> Distribution of data sources and difficulty levels</p>
+                <img src="static/images/dataset/double_layer_pie_chart_no_labels.png" alt="Data Distribution" width="80%"/>
+                <p> Comparison between VisAidMath and other
+                    benchmarks. Our work particularly focus on utilization
+                    of explicit and implicit visual context during reasoning
+                    process.</p>
               </div>
             </div>
           </div>
@@ -202,34 +204,53 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- 3.1 Data Source Table -->
-        <h2 class="title is-3">Data Sources</h2>
-        <div class="content">
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Data Source</th>
-                <th>Details</th>
-                <th>Difficulty Level</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Academic Papers</td>
-                <td>Processed with terminology standardization</td>
-                <td>L3</td>
-              </tr>
-              <tr>
-                <td>Web Crawling</td>
-                <td>Privacy information anonymized</td>
-                <td>L2</td>
-              </tr>
-              <tr>
-                <td>Human Annotation</td>
-                <td>Multi-round quality review</td>
-                <td>L1-L3</td>
-              </tr>
-            </tbody>
-          </table>
+        <h2 class="title is-3">Data Sources & Distribution</h2>
+        <div class="columns">
+          <!-- Left Column: Data Source Table -->
+          <div class="column is-half">
+            <div class="box" style="height: 100%;">
+              <h3 class="title is-4">Data Sources</h3>
+              <div class="content">
+                <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th>Data Source</th>
+                      <th>Details</th>
+                      <th>Difficulty Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Academic Papers</td>
+                      <td>Processed with terminology standardization</td>
+                      <td>L3</td>
+                    </tr>
+                    <tr>
+                      <td>Web Crawling</td>
+                      <td>Privacy information anonymized</td>
+                      <td>L2</td>
+                    </tr>
+                    <tr>
+                      <td>Human Annotation</td>
+                      <td>Multi-round quality review</td>
+                      <td>L1-L3</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column: Data Distribution -->
+          <div class="column is-half">
+            <div class="box" style="height: 100%;">
+              <h3 class="title is-4">Data Distribution</h3>
+              <div class="content has-text-centered">
+                <img src="static/images/dataset/data_distribution.png" alt="Data Distribution" width="90%"/>
+                <p>Distribution of samples across different mathematical branches and visual aid types. The dataset maintains balance across difficulty levels to ensure comprehensive evaluation.</p>
+              </div>
+            </div>
+          </div>
         </div>
         
         <!-- 3.2 Annotation Process -->
