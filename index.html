@@ -157,7 +157,7 @@
             </div>
           </div>
           
-          <!-- Right: Data Distribution -->
+          <!-- Right: Dataset Comparison -->
           <div class="column">
             <div class="box" style="height: 100%;">
               <h3 class="title is-4">Dataset Comparison</h3>
@@ -215,25 +215,73 @@
                   <thead>
                     <tr>
                       <th>Data Source</th>
-                      <th>Details</th>
-                      <th>Difficulty Level</th>
+                      <th>Detail</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Academic Papers</td>
-                      <td>Processed with terminology standardization</td>
-                      <td>L3</td>
+                      <td>High Textbook</td>
+                      <td>Chinese high school textbook</td>
                     </tr>
                     <tr>
-                      <td>Web Crawling</td>
-                      <td>Privacy information anonymized</td>
-                      <td>L2</td>
+                      <td>Middle Practice</td>
+                      <td>Chinese high school practice sheet</td>
                     </tr>
                     <tr>
-                      <td>Human Annotation</td>
-                      <td>Multi-round quality review</td>
-                      <td>L1-L3</td>
+                      <td>AP Easy</td>
+                      <td>AP calculus (categorized into <code>Easy</code> category)</td>
+                    </tr>
+                    <tr>
+                      <td>Middle Simulate</td>
+                      <td>Chinese middle school simulated examination</td>
+                    </tr>
+                    <tr>
+                      <td>AP Middle</td>
+                      <td>AP calculus (categorized into <code>Medium</code> category)</td>
+                    </tr>
+                    <tr>
+                      <td>High Practice</td>
+                      <td>Chinese high school practice sheet</td>
+                    </tr>
+                    <tr>
+                      <td>DSE Final</td>
+                      <td>HKDSE final examination</td>
+                    </tr>
+                    <tr>
+                      <td>High Final</td>
+                      <td>Chinese high school final examination</td>
+                    </tr>
+                    <tr>
+                      <td>High Simulate</td>
+                      <td>Chinese high school simulated examination</td>
+                    </tr>
+                    <tr>
+                      <td>Math Analysis Demidovich Textbook</td>
+                      <td>Demidovich Problems in Mathematical Analysis</td>
+                    </tr>
+                    <tr>
+                      <td>Analytic Geometry Lv Textbook</td>
+                      <td>Analytic geometry textbook written by Lingen Lv</td>
+                    </tr>
+                    <tr>
+                      <td>CMO Final</td>
+                      <td>Chinese Mathematical Olympiad</td>
+                    </tr>
+                    <tr>
+                      <td>CMO Practice</td>
+                      <td>Chinese Mathematical Olympiad practice sheet</td>
+                    </tr>
+                    <tr>
+                      <td>AIME Final</td>
+                      <td>American Invitational Mathematics Examination (AIME)</td>
+                    </tr>
+                    <tr>
+                      <td>AMC 8 Practice</td>
+                      <td>American Mathematics Competition 8 (AMC 8)</td>
+                    </tr>
+                    <tr>
+                      <td>AMC 10 Final</td>
+                      <td>American Mathematics Competition 10 (AMC 10)</td>
                     </tr>
                   </tbody>
                 </table>
@@ -597,85 +645,588 @@
         </div>
         <div id="task2" class="tab-content" style="display:none">
           <div class="box">
-            <h3 class="title is-4 has-text-centered">Task 2: Literature Understanding</h3>
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Accuracy↑</th>
-                  <th>F1 Score↑</th>
-                  <th>Latency↓</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baseline Model</td>
-                  <td>68.7%</td>
-                  <td>65.2%</td>
-                  <td>130ms</td>
-                </tr>
-                <tr>
-                  <td>Model A</td>
-                  <td>74.5%</td>
-                  <td>71.8%</td>
-                  <td>115ms</td>
-                </tr>
-                <tr>
-                  <td>Model B</td>
-                  <td>79.2%</td>
-                  <td>76.5%</td>
-                  <td>108ms</td>
-                </tr>
-                <tr>
-                  <td>Our Method</td>
-                  <td>83.7%</td>
-                  <td>80.9%</td>
-                  <td>98ms</td>
-                </tr>
-              </tbody>
-            </table>
+            <h3 class="title is-4 has-text-centered">模型性能对比</h3>
+            <div class="table-container">
+              <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>ALL</th>
+                    <th>PLG</th>
+                    <th>SDG</th>
+                    <th>AYG</th>
+                    <th>CAL</th>
+                    <th>AXL</th>
+                    <th>RTC</th>
+                    <th>THC</th>
+                    <th>PLG</th>
+                    <th>SDG</th>
+                    <th>FUG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>启发式基线</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Random Answer</td>
+                    <td>24.42</td>
+                    <td>21.54</td>
+                    <td>34.31</td>
+                    <td>21.45</td>
+                    <td>20.07</td>
+                    <td>24.44</td>
+                    <td>20.87</td>
+                    <td>35.16</td>
+                    <td>10.53</td>
+                    <td>32.89</td>
+                    <td>21.50</td>
+                  </tr>
+                  <tr>
+                    <td>Frequent Answer</td>
+                    <td>40.83</td>
+                    <td>28.92</td>
+                    <td>50.65</td>
+                    <td>40.36</td>
+                    <td>44.22</td>
+                    <td>32.79</td>
+                    <td>47.25</td>
+                    <td>74.73</td>
+                    <td>20.00</td>
+                    <td>47.73</td>
+                    <td>44.53</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型语言模型 (LLMs): 仅文本输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Llama2-7B</td>
+                    <td>23.25</td>
+                    <td>22.77</td>
+                    <td>29.74</td>
+                    <td>17.82</td>
+                    <td>22.11</td>
+                    <td>22.80</td>
+                    <td>19.72</td>
+                    <td>28.57</td>
+                    <td>8.42</td>
+                    <td>28.29</td>
+                    <td>21.11</td>
+                  </tr>
+                  <tr>
+                    <td>Mistral-7b-Instruct-v0.2</td>
+                    <td>25.58</td>
+                    <td>24.31</td>
+                    <td>29.41</td>
+                    <td>25.09</td>
+                    <td>23.47</td>
+                    <td>24.59</td>
+                    <td>25.46</td>
+                    <td>25.27</td>
+                    <td>6.32</td>
+                    <td>26.32</td>
+                    <td>25.91</td>
+                  </tr>
+                  <tr>
+                    <td>GPT3.5</td>
+                    <td>37.75</td>
+                    <td>32.62</td>
+                    <td>44.44</td>
+                    <td>33.82</td>
+                    <td>40.14</td>
+                    <td>37.85</td>
+                    <td>38.30</td>
+                    <td>40.66</td>
+                    <td>17.89</td>
+                    <td>43.42</td>
+                    <td>38.20</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4</td>
+                    <td class="has-background-success-light">51.17</td>
+                    <td class="has-background-warning-light">41.54</td>
+                    <td class="has-background-warning-light">47.39</td>
+                    <td class="has-background-success-light">50.91</td>
+                    <td class="has-background-success-light">65.99</td>
+                    <td class="has-background-success-light">45.45</td>
+                    <td class="has-background-success-light">55.73</td>
+                    <td class="has-background-success-light">59.34</td>
+                    <td class="has-background-warning-light">22.11</td>
+                    <td class="has-background-warning-light">49.34</td>
+                    <td class="has-background-success-light">61.80</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型多模态模型 (LMMs): 仅文本输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-Next-Mistral-7B</td>
+                    <td>28.83</td>
+                    <td>26.15</td>
+                    <td>35.29</td>
+                    <td>24.36</td>
+                    <td>29.25</td>
+                    <td>27.72</td>
+                    <td>28.67</td>
+                    <td>30.77</td>
+                    <td>10.53</td>
+                    <td>35.53</td>
+                    <td>28.79</td>
+                  </tr>
+                  <tr>
+                    <td>InternLM-XComposer2-VL</td>
+                    <td>34.33</td>
+                    <td>28.00</td>
+                    <td>45.75</td>
+                    <td>28.36</td>
+                    <td>35.03</td>
+                    <td>32.64</td>
+                    <td>33.49</td>
+                    <td>53.85</td>
+                    <td>13.68</td>
+                    <td>36.18</td>
+                    <td>33.40</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Plus</td>
+                    <td>33.00</td>
+                    <td>34.15</td>
+                    <td>39.54</td>
+                    <td>29.09</td>
+                    <td>28.57</td>
+                    <td>34.87</td>
+                    <td>30.05</td>
+                    <td>34.07</td>
+                    <td>13.68</td>
+                    <td>43.42</td>
+                    <td>30.52</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-Pro-Vision</td>
+                    <td>40.33</td>
+                    <td>31.38</td>
+                    <td class="has-background-success-light">50.98</td>
+                    <td>35.27</td>
+                    <td>43.88</td>
+                    <td>36.66</td>
+                    <td>41.28</td>
+                    <td>53.85</td>
+                    <td>17.89</td>
+                    <td>49.34</td>
+                    <td>41.84</td>
+                  </tr>
+                  <tr>
+                    <td>Claude-3-Sonnet</td>
+                    <td>38.83</td>
+                    <td>27.08</td>
+                    <td>47.06</td>
+                    <td>38.18</td>
+                    <td>43.88</td>
+                    <td>33.38</td>
+                    <td>39.68</td>
+                    <td class="has-background-warning-light">57.14</td>
+                    <td>16.84</td>
+                    <td>48.03</td>
+                    <td>42.80</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4V</td>
+                    <td class="has-background-warning-light">49.00</td>
+                    <td class="has-background-success-light">42.46</td>
+                    <td>46.08</td>
+                    <td class="has-background-warning-light">48.73</td>
+                    <td class="has-background-warning-light">59.52</td>
+                    <td class="has-background-warning-light">43.82</td>
+                    <td class="has-background-warning-light">52.75</td>
+                    <td>52.75</td>
+                    <td class="has-background-warning-light">22.11</td>
+                    <td class="has-background-warning-light">50.00</td>
+                    <td class="has-background-warning-light">57.58</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型多模态模型 (LMMs): 多模态输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-Next-Mistral-7B</td>
+                    <td>30.08</td>
+                    <td>27.08</td>
+                    <td>37.91</td>
+                    <td>25.82</td>
+                    <td>29.25</td>
+                    <td>28.32</td>
+                    <td>29.13</td>
+                    <td>41.76</td>
+                    <td>9.47</td>
+                    <td>34.87</td>
+                    <td>28.98</td>
+                  </tr>
+                  <tr>
+                    <td>InternLM-XComposer2-VL</td>
+                    <td>33.17</td>
+                    <td>26.77</td>
+                    <td>39.87</td>
+                    <td>32.00</td>
+                    <td>34.35</td>
+                    <td>30.85</td>
+                    <td>32.80</td>
+                    <td>43.96</td>
+                    <td>11.58</td>
+                    <td>36.84</td>
+                    <td>34.93</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Plus</td>
+                    <td>30.58</td>
+                    <td>29.23</td>
+                    <td>35.62</td>
+                    <td>28.73</td>
+                    <td>28.57</td>
+                    <td>31.15</td>
+                    <td>29.82</td>
+                    <td>27.47</td>
+                    <td>13.68</td>
+                    <td>41.45</td>
+                    <td>30.52</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-Pro-Vision</td>
+                    <td>39.00</td>
+                    <td>27.38</td>
+                    <td class="has-background-warning-light">49.02</td>
+                    <td>36.36</td>
+                    <td>43.88</td>
+                    <td>35.32</td>
+                    <td>40.37</td>
+                    <td>52.75</td>
+                    <td>14.74</td>
+                    <td>48.68</td>
+                    <td>42.03</td>
+                  </tr>
+                  <tr>
+                    <td>Claude-3-Sonnet</td>
+                    <td>39.33</td>
+                    <td>30.15</td>
+                    <td>46.41</td>
+                    <td>37.45</td>
+                    <td>43.88</td>
+                    <td>34.72</td>
+                    <td>38.99</td>
+                    <td class="has-background-warning-light">56.04</td>
+                    <td>16.84</td>
+                    <td>47.37</td>
+                    <td>42.42</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4V</td>
+                    <td class="has-background-warning-light">49.08</td>
+                    <td class="has-background-warning-light">41.54</td>
+                    <td>47.39</td>
+                    <td class="has-background-warning-light">48.73</td>
+                    <td class="has-background-warning-light">59.52</td>
+                    <td class="has-background-warning-light">43.82</td>
+                    <td class="has-background-warning-light">53.21</td>
+                    <td>51.65</td>
+                    <td class="has-background-success-light">24.21</td>
+                    <td class="has-background-warning-light">51.97</td>
+                    <td class="has-background-warning-light">57.97</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="has-text-centered">表格中，<span class="has-background-success-light">绿色</span>表示最佳性能，<span class="has-background-warning-light">黄色</span>表示次佳性能</p>
           </div>
         </div>
         
         <div id="task3" class="tab-content" style="display:none">
           <div class="box">
-            <h3 class="title is-4 has-text-centered">Task 3: Multimodal Fusion</h3>
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Accuracy↑</th>
-                  <th>F1 Score↑</th>
-                  <th>Latency↓</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Baseline Model</td>
-                  <td>65.1%</td>
-                  <td>62.3%</td>
-                  <td>145ms</td>
-                </tr>
-                <tr>
-                  <td>Model A</td>
-                  <td>71.8%</td>
-                  <td>69.4%</td>
-                  <td>125ms</td>
-                </tr>
-                <tr>
-                  <td>Model B</td>
-                  <td>77.3%</td>
-                  <td>74.1%</td>
-                  <td>112ms</td>
-                </tr>
-                <tr>
-                  <td>Our Method</td>
-                  <td>82.5%</td>
-                  <td>79.8%</td>
-                  <td>102ms</td>
-                </tr>
-              </tbody>
-            </table>
+            <h3 class="title is-4 has-text-centered">模型性能对比</h3>
+            <div class="table-container">
+              <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>ALL</th>
+                    <th>PLG</th>
+                    <th>SDG</th>
+                    <th>AYG</th>
+                    <th>CAL</th>
+                    <th>AXL</th>
+                    <th>RTC</th>
+                    <th>THC</th>
+                    <th>PLG</th>
+                    <th>SDG</th>
+                    <th>FUG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>启发式基线</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Random Answer</td>
+                    <td>24.42</td>
+                    <td>21.54</td>
+                    <td>34.31</td>
+                    <td>21.45</td>
+                    <td>20.07</td>
+                    <td>24.44</td>
+                    <td>20.87</td>
+                    <td>35.16</td>
+                    <td>10.53</td>
+                    <td>32.89</td>
+                    <td>21.50</td>
+                  </tr>
+                  <tr>
+                    <td>Frequent Answer</td>
+                    <td>40.83</td>
+                    <td>28.92</td>
+                    <td>50.65</td>
+                    <td>40.36</td>
+                    <td>44.22</td>
+                    <td>32.79</td>
+                    <td>47.25</td>
+                    <td>74.73</td>
+                    <td>20.00</td>
+                    <td>47.73</td>
+                    <td>44.53</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型语言模型 (LLMs): 仅文本输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Llama2-7B</td>
+                    <td>24.08</td>
+                    <td>21.23</td>
+                    <td>31.05</td>
+                    <td>25.82</td>
+                    <td>18.37</td>
+                    <td>25.04</td>
+                    <td>22.71</td>
+                    <td>31.87</td>
+                    <td>7.37</td>
+                    <td>30.26</td>
+                    <td>22.46</td>
+                  </tr>
+                  <tr>
+                    <td>Mistral-7b-Instruct-v0.2</td>
+                    <td>28.33</td>
+                    <td>27.69</td>
+                    <td>33.33</td>
+                    <td>24.73</td>
+                    <td>27.21</td>
+                    <td>27.72</td>
+                    <td>27.29</td>
+                    <td>34.07</td>
+                    <td>14.74</td>
+                    <td>32.89</td>
+                    <td>27.26</td>
+                  </tr>
+                  <tr>
+                    <td>GPT3.5</td>
+                    <td>36.33</td>
+                    <td>31.08</td>
+                    <td>39.22</td>
+                    <td>34.91</td>
+                    <td>40.48</td>
+                    <td>33.08</td>
+                    <td>37.84</td>
+                    <td>50.55</td>
+                    <td>14.74</td>
+                    <td>39.47</td>
+                    <td>39.73</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4</td>
+                    <td class="has-background-success-light">52.17</td>
+                    <td class="has-background-success-light">42.77</td>
+                    <td class="has-background-warning-light">49.02</td>
+                    <td class="has-background-success-light">53.09</td>
+                    <td class="has-background-success-light">64.97</td>
+                    <td class="has-background-success-light">46.94</td>
+                    <td class="has-background-success-light">57.11</td>
+                    <td class="has-background-warning-light">54.95</td>
+                    <td class="has-background-warning-light">20.00</td>
+                    <td class="has-background-warning-light">52.63</td>
+                    <td class="has-background-success-light">62.76</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型多模态模型 (LMMs): 仅文本输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-Next-Mistral-7B</td>
+                    <td>27.67</td>
+                    <td>27.38</td>
+                    <td>33.99</td>
+                    <td>24.36</td>
+                    <td>24.49</td>
+                    <td>27.42</td>
+                    <td>25.00</td>
+                    <td>29.67</td>
+                    <td>11.58</td>
+                    <td>33.55</td>
+                    <td>25.91</td>
+                  </tr>
+                  <tr>
+                    <td>InternLM-XComposer2-VL</td>
+                    <td>33.50</td>
+                    <td>28.31</td>
+                    <td>43.46</td>
+                    <td>32.36</td>
+                    <td>29.93</td>
+                    <td>33.68</td>
+                    <td>32.80</td>
+                    <td>49.45</td>
+                    <td>13.68</td>
+                    <td>41.45</td>
+                    <td>31.86</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Plus</td>
+                    <td>35.42</td>
+                    <td>31.69</td>
+                    <td>40.85</td>
+                    <td>38.18</td>
+                    <td>31.29</td>
+                    <td>36.51</td>
+                    <td>39.22</td>
+                    <td>40.66</td>
+                    <td>15.79</td>
+                    <td>39.47</td>
+                    <td>34.93</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-Pro-Vision</td>
+                    <td>42.92</td>
+                    <td>32.31</td>
+                    <td class="has-background-success-light">51.96</td>
+                    <td>40.73</td>
+                    <td>47.28</td>
+                    <td>39.79</td>
+                    <td>43.35</td>
+                    <td class="has-background-success-light">57.14</td>
+                    <td>17.89</td>
+                    <td>47.37</td>
+                    <td>45.87</td>
+                  </tr>
+                  <tr>
+                    <td>Claude-3-Sonnet</td>
+                    <td>39.00</td>
+                    <td>31.38</td>
+                    <td>42.16</td>
+                    <td>41.45</td>
+                    <td>41.84</td>
+                    <td>35.92</td>
+                    <td>40.14</td>
+                    <td>46.15</td>
+                    <td>17.89</td>
+                    <td>42.11</td>
+                    <td>43.19</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4V</td>
+                    <td class="has-background-warning-light">47.58</td>
+                    <td class="has-background-warning-light">40.31</td>
+                    <td>47.71</td>
+                    <td class="has-background-warning-light">42.55</td>
+                    <td class="has-background-warning-light">60.20</td>
+                    <td class="has-background-warning-light">42.32</td>
+                    <td class="has-background-warning-light">47.94</td>
+                    <td>50.55</td>
+                    <td class="has-background-success-light">21.05</td>
+                    <td class="has-background-success-light">55.26</td>
+                    <td class="has-background-warning-light">53.93</td>
+                  </tr>
+                  <tr>
+                    <td colspan="12" class="has-text-centered has-background-grey-lighter"><strong>大型多模态模型 (LMMs): 多模态输入</strong></td>
+                  </tr>
+                  <tr>
+                    <td>LLaVA-Next-Mistral-7B</td>
+                    <td>27.08</td>
+                    <td>27.69</td>
+                    <td>32.03</td>
+                    <td>23.64</td>
+                    <td>24.49</td>
+                    <td>27.42</td>
+                    <td>24.31</td>
+                    <td>26.37</td>
+                    <td>11.58</td>
+                    <td>32.89</td>
+                    <td>25.72</td>
+                  </tr>
+                  <tr>
+                    <td>InternLM-XComposer2-VL</td>
+                    <td>30.42</td>
+                    <td>20.00</td>
+                    <td>39.54</td>
+                    <td>33.09</td>
+                    <td>29.93</td>
+                    <td>26.97</td>
+                    <td>31.88</td>
+                    <td>40.66</td>
+                    <td>10.53</td>
+                    <td>34.87</td>
+                    <td>32.25</td>
+                  </tr>
+                  <tr>
+                    <td>Qwen-VL-Plus</td>
+                    <td>32.58</td>
+                    <td>31.69</td>
+                    <td>30.39</td>
+                    <td>37.45</td>
+                    <td>31.29</td>
+                    <td>33.23</td>
+                    <td>38.99</td>
+                    <td>25.27</td>
+                    <td>16.84</td>
+                    <td>37.50</td>
+                    <td>34.55</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini-Pro-Vision</td>
+                    <td>41.42</td>
+                    <td>29.54</td>
+                    <td class="has-background-warning-light">48.69</td>
+                    <td>41.09</td>
+                    <td>47.28</td>
+                    <td>37.85</td>
+                    <td>43.81</td>
+                    <td class="has-background-warning-light">45.05</td>
+                    <td>14.74</td>
+                    <td class="has-background-warning-light">48.03</td>
+                    <td>46.07</td>
+                  </tr>
+                  <tr>
+                    <td>Claude-3-Sonnet</td>
+                    <td>36.67</td>
+                    <td>24.92</td>
+                    <td>39.22</td>
+                    <td>42.18</td>
+                    <td>41.84</td>
+                    <td>32.04</td>
+                    <td>40.37</td>
+                    <td>41.76</td>
+                    <td>14.74</td>
+                    <td>43.42</td>
+                    <td>43.76</td>
+                  </tr>
+                  <tr>
+                    <td>GPT4V</td>
+                    <td class="has-background-warning-light">44.17</td>
+                    <td class="has-background-warning-light">37.54</td>
+                    <td>37.25</td>
+                    <td class="has-background-warning-light">42.91</td>
+                    <td class="has-background-warning-light">59.86</td>
+                    <td class="has-background-warning-light">38.60</td>
+                    <td class="has-background-warning-light">47.25</td>
+                    <td>36.26</td>
+                    <td class="has-background-warning-light">17.89</td>
+                    <td class="has-background-warning-light">48.03</td>
+                    <td class="has-background-warning-light">53.74</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="has-text-centered">表格中，<span class="has-background-success-light">绿色</span>表示最佳性能，<span class="has-background-warning-light">黄色</span>表示次佳性能</p>
+            <p class="has-text-centered">ALL：总体准确率；数学分支：PLG：平面几何，SDG：立体几何，AYG：解析几何，CAL：微积分和函数；视觉辅助类型：AXL：辅助线，RTC：直角坐标，THC：三维直角坐标，PLG：平面几何图，SDG：立体几何图，FUG：函数图</p>
           </div>
         </div>
       </div>
