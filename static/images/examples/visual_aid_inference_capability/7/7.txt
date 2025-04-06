@@ -1,0 +1,2 @@
+Example of GPT4V generate different visual aids for alternative substantial reasoning path
+and provide wrong final result

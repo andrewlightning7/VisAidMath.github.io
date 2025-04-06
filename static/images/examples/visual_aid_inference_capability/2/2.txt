@@ -1,0 +1,2 @@
+Example of GPT4V fail to generate visual aids due to task misunderstanding. Model
+replicate.

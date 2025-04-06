@@ -1,0 +1,2 @@
+Example of GPT4V fail to correctly generate visual aids due to context conflicting
+hallucination
